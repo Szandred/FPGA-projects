@@ -1,0 +1,9 @@
+
+{
+    "name": "counter",
+    "includedFiles": ["counter.v"],
+    "testBenches": ["counter_tb.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "top": "top",
+    "board": "tangnano9k"
+}

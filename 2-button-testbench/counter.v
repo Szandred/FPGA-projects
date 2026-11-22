@@ -1,14 +1,15 @@
 `default_nettype none
 
-module top
-(
+module top #(
+    parameter WAIT_TIME = 13500000
+)(
     input clk,
     input btn1,
     input btn2,
     output [5:0] led
 );
 
-localparam WAIT_TIME = 13500000; // TANG NANO 9k has 27 MHz clock frequency so to to wait half a second we delay by 27MHz / 2
+ // localparam WAIT_TIME = 13500000; // TANG NANO 9k has 27 MHz clock frequency so to to wait half a second we delay by 27MHz / 2
 reg [5:0] ledCounter = 0;
 reg [23:0] clockCounter = 0; // need 24 bits to get up to 13.5Mhz
 reg paused = 0;
